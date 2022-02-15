@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    text-rendering:optimizeLegibility;
+    box-sizing: border-box;
+}
+html, body{
+    font-size: 25px;
+    background: yellow;
+    font-weight: 400;
+    font-family: cursive;
+}
+.tab-wrap{
+    width: 60%;
+    margin: 50px auto;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    border: 2px solid #000;
+} 
+
+.tab-wrap input[type="radio"]{
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+.tab-wrap li{
+    display: block;
+    float: left;
+}
+.tab-wrap label{
+    display: inline-block;
+    background: orange;
+    padding: 10px 30px;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid #000;
+    margin: 40px 20px 0 0;
+    cursor: pointer;
+}
+.tab-content-box{
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 0 10px 10px 10px;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    display: none;
+}
+.tab-wrap [id^=tab]:checked + label{
+    background: #fff;
+}
+.tab-wrap [id^=tab]:checked ~ .tab-content-box{
+    display: block;
+}
